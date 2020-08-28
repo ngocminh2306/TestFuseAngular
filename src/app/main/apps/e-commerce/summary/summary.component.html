@@ -1,0 +1,52 @@
+<div style="height: 50%; padding: 1rem 0.25rem 1rem 0.25rem; border-top: 1px solid;">
+  <ng-container *ngIf="department">
+    <p>
+      <strong>Mã phòng ban: </strong>
+      <span>{{department?.Code}}</span>
+    </p>
+    <p>
+      <strong>Tên phòng ban: </strong>
+      <span>{{department?.Name}}</span>
+    </p>
+    <p>
+      <strong>Ngày thành lập: </strong>
+      <span>{{department?.CreateDate}}</span>
+    </p>
+    <p>
+      <strong>Mô tả: </strong>
+      <span>{{department?.Description }}</span>
+    </p>
+  </ng-container>
+  <ng-container *ngIf="jobTitle">
+    <p>
+      <strong>Mã chức danh: </strong>
+      <span>{{jobTitle?.Code}}</span>
+    </p>
+    <p>
+      <strong>Tên chức danh: </strong>
+      <span>{{jobTitle?.Name}}</span>
+    </p>
+    <p>
+      <strong>Mô tả: </strong>
+      <span>{{jobTitle?.Description }}</span>
+    </p>
+    <p>
+      <strong>Số nhân viên giữ chức vụ này: </strong>
+      <span>{{jobTitle?._employ.length }}</span>
+    </p>
+  </ng-container>
+  <ng-container *ngIf="employee">
+    <p>
+      <strong>Mã nhân viên: </strong>
+      <span>{{employee?.Code}}</span>
+    </p>
+    <p>
+      <strong>Tên nhân viên: </strong>
+      <span>{{employee?.Name}}</span>
+    </p>
+    <p>
+      <strong>Mô tả: </strong>
+      <span>{{employee?.Description }}</span>
+    </p>
+  </ng-container>
+</div>

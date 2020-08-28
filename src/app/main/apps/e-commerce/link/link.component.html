@@ -1,0 +1,22 @@
+<ng-container *ngIf="deparment">
+  <p>
+    <a routerLink="/apps/e-commerce/employees" [queryParams]="{deparment:deparment.Code}">Xem nhân viên thuộc {{deparment?.Name}}</a>
+  </p>
+</ng-container>
+<ng-container *ngIf="jobTitle">
+  <p>
+    <a routerLink="/apps/e-commerce/employees" [queryParams]="{jobtitle:jobTitle.Code}">Xem nhân viên thuộc {{jobTitle?.Name}}</a>
+  </p>
+</ng-container>
+<ng-container *ngIf="employee">
+  <p>
+    <a *ngFor="let item of employee.Titles" routerLink="/apps/e-commerce/job-title-detail/{{item.JobTitleCode}}">
+      <i>Chức danh: </i><span>{{item.JobTitleCode}}</span>
+    </a>
+  </p>
+  <p>
+    <a *ngFor="let item of employee.Titles" routerLink="/apps/e-commerce/department-detail/{{item.DepartmentCode}}">
+      <i>Phòng ban: </i><span>{{item.DepartmentCode}}</span>
+    </a>
+  </p>
+</ng-container>
